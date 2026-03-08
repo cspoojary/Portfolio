@@ -7,84 +7,107 @@
   <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
-<header class="navbar">
+
+  <header class="navbar">
     <h2 class="logo"><a href="index.html">Chaithanya S Poojary</a></h2>
-    
     <nav class="header-nav">
-      <a href="./index.html" class="active">Home</a>
+      <a href="./index.html">Home</a>
       <a href="./aboutme.html">About</a>
       <a href="./project.html">Projects</a>
       <a href="./experience.html">Experience</a>
-      <a href="./certifiction.html">Certification</a>
+      <a href="./certifiction.html" class="active">Certification</a>
     </nav>
-
     <div class="icon-row">
-      <!-- GitHub -->
-      <a href="https://github.com/cspoojary" target="_blank" class="icon-box" title="GitHub">
-        <img src="assets/images/github.png" alt="GitHub">
-      </a>
-
-      <!-- LinkedIn -->
-      <a href="https://www.linkedin.com/in/chaithanya-s-poojary05/" target="_blank" class="icon-box" title="LinkedIn">
-        <img src="assets/images/linkedin-logo.png" alt="LinkedIn">
-      </a>
-
-      <!-- Gmail -->
-      <a href="mailto:chaithanyaspoojary05@gmail.com" class="icon-box" title="Email">
-        <img src="assets/images/email.png" alt="Email">
-      </a>
+      <a href="https://github.com/cspoojary" target="_blank" class="icon-box" title="GitHub"><img src="assets/images/github.png" alt="GitHub"></a>
+      <a href="https://www.linkedin.com/in/chaithanya-s-poojary05/" target="_blank" class="icon-box" title="LinkedIn"><img src="assets/images/linkedin-logo.png" alt="LinkedIn"></a>
+      <a href="mailto:chaithanyaspoojary05@gmail.com" class="icon-box" title="Email"><img src="assets/images/email.png" alt="Email"></a>
     </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </header>
-<section class="exp_body">
-  <h2 class = 'main_header'>Certifications</h2>
 
-  <div class="cer_card">
-    <div class="ins_card">
-      <img src="assets/images/ccna-certification.png" alt="CCNA">
-      <div>
-        <h3>Cisco Certified Network Associate (CCNA)</h3> <p>Karnataka German Technical Training Institute (KGTTI)</p>
-        <span>2024</span>
+  <nav class="mobile-menu" id="mobile-menu">
+    <a href="./index.html">Home</a>
+    <a href="./aboutme.html">About</a>
+    <a href="./project.html">Projects</a>
+    <a href="./experience.html">Experience</a>
+    <a href="./certifiction.html" class="active">Certification</a>
+  </nav>
+
+  <section class="exp_body">
+    <h2 class="main_header">Certifications</h2>
+
+    <div class="cer_card">
+      <div class="ins_card">
+        <img src="assets/images/ccna-certification.png" alt="CCNA">
+        <div>
+          <h3>Cisco Certified Network Associate (CCNA)</h3>
+          <p>Karnataka German Technical Training Institute (KGTTI)</p>
+          <span>2024</span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="cer_card">
-    <div class="ins_card">
-      <img src="assets/images/PwoerBi.png" alt="Power BI">
-      <div>
-        <h3>Data Analytics with Microsoft Power BI</h3> <p>Aisect & NASSCOM Foundation</p> <span>2024</span>
+    <div class="cer_card">
+      <div class="ins_card">
+        <img src="assets/images/PwoerBi.png" alt="Power BI">
+        <div>
+          <h3>Data Analytics with Microsoft Power BI</h3>
+          <p>Aisect & NASSCOM Foundation</p>
+          <span>2024</span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="cer_card">
-    <div class="ins_card">
-      <img src="assets/images/udemy-data-science-certification.png" alt="Data Science">
-      <div>
-        <h3>Complete Data Science Bootcamp</h3>
-        <p>Udemy</p><span>2026</span>
+    <div class="cer_card">
+      <div class="ins_card">
+        <img src="assets/images/udemy-data-science-certification.png" alt="Data Science">
+        <div>
+          <h3>Complete Data Science Bootcamp</h3>
+          <p>Udemy</p>
+          <span>2026</span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="cer_card">
-    <div class="ins_card">
-      <img src="assets/images/Microsoft-excel_certification.png" alt="Excel">
-      <div>
-        <h3>Advanced Excel Formulas & Functions</h3> <p>Udemy</p> <span>2025</span>
+    <div class="cer_card">
+      <div class="ins_card">
+        <img src="assets/images/Microsoft-excel_certification.png" alt="Excel">
+        <div>
+          <h3>Advanced Excel Formulas & Functions</h3>
+          <p>Udemy</p>
+          <span>2025</span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="cer_card">
-    <div class="ins_card">
-      <img src="assets/images/Deloitte-certification.png" alt="Deloitte">
-      <div>
-        <h3>Data Analytics Job Simulation</h3> <p>Deloitte</p> <span>2025</span>
+    <div class="cer_card">
+      <div class="ins_card">
+        <img src="assets/images/Deloitte-certification.png" alt="Deloitte">
+        <div>
+          <h3>Data Analytics Job Simulation</h3>
+          <p>Deloitte</p>
+          <span>2025</span>
+        </div>
       </div>
     </div>
-  </div>
 
-</section>
+  </section>
+
+  <script>
+    const btn = document.getElementById('hamburger');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      btn.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', open);
+    });
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      menu.classList.remove('open');
+      btn.classList.remove('open');
+      btn.setAttribute('aria-expanded', false);
+    }));
+  </script>
 </body>
 </html>
