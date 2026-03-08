@@ -46,18 +46,41 @@
 
   <section class="hero">
     <p class="tagline">CRAFTING DATA-DRIVEN SOLUTIONS</p>
+
     <h1>Transforming Data Into <br><span>Actionable Insights</span></h1>
+
     <p class="description">
       Hi, I'm <b>Chaithanya S</b>, a Data Science student with a strong foundation in
       <b>Python, SQL, Excel, Numpy, Pandas, Matplotlib, Machine Learning, Deep Learning, CSS, HTML, JavaScript and data analytics</b>.
       I enjoy turning raw data into meaningful insights through data visualization, exploratory analysis,
       and machine learning to support smarter decision-making.
     </p>
+
     <a class="resume-btn"
       href="https://chaithanya.chethanspoojary.com/wp-content/uploads/2026/02/Chaithanya_S_Resume.pdf"
-      target="_blank" title="Resume">
-      <span class="icon">⬇</span> View Resume
+      target="_blank"
+      title="Resume">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+      View Resume
     </a>
+
+    <!-- Social icons: hidden on desktop, shown below resume btn on mobile -->
+    <div class="hero-icons">
+      <a href="https://github.com/cspoojary" target="_blank" class="icon-box" title="GitHub">
+        <img src="assets/images/github.png" alt="GitHub">
+      </a>
+      <a href="https://www.linkedin.com/in/chaithanya-s-poojary05/" target="_blank" class="icon-box" title="LinkedIn">
+        <img src="assets/images/linkedin-logo.png" alt="LinkedIn">
+      </a>
+      <a href="mailto:chaithanyaspoojary05@gmail.com" class="icon-box" title="Email">
+        <img src="assets/images/email.png" alt="Email">
+      </a>
+    </div>
   </section>
 
   <script>
@@ -68,11 +91,14 @@
       btn.classList.toggle('open', open);
       btn.setAttribute('aria-expanded', open);
     });
-    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      menu.classList.remove('open');
-      btn.classList.remove('open');
-      btn.setAttribute('aria-expanded', false);
-    }));
+    menu.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded', false);
+      });
+    });
   </script>
+
 </body>
 </html>
